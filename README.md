@@ -6,6 +6,16 @@
 
 It starts from the paper's core problem, follows step by step how the researchers solved it, and keeps asking back: was this core problem really solved? It was made with Durweg's own guide write-your-method and tried on the U-Net paper (Ronneberger et al., MICCAI 2015). The whole story is on the **[case page](https://claude.ai/artifact/8k8yQWw4c8UEvyqktYbAQk)** (English, with a switch to Chinese; a copy is in this repository: [case/stepaper-case.html](case/stepaper-case.html)). The workflow's step texts are in Chinese; the agent asks at the start which language the run uses.
 
+## 📥 The finished slides
+
+What one run produces: the 10-slide group-meeting deck for the U-Net paper, with speaker notes on every slide.
+
+**Download:** [⬇ English (.pptx)](https://github.com/musetee/durweg-stepaper/raw/main/case/slides/unet-group-meeting-en.pptx) · [⬇ 中文 (.pptx)](https://github.com/musetee/durweg-stepaper/raw/main/case/slides/unet-group-meeting-zh.pptx) · [⬇ Deutsch (.pptx)](https://github.com/musetee/durweg-stepaper/raw/main/case/slides/unet-group-meeting-de.pptx)
+
+[![The 10 slides of the English deck](case/slides/preview-en.png)](case/slides/preview-en.png)
+
+The figures on these slides are redrawn or synthetic, so they can be shared; the slides name the paper figure each one stands for.
+
 ## 🧭 Install
 
 You need Durweg first ([install Durweg](https://github.com/musetee/durweg/blob/main/README.md)).
@@ -46,5 +56,4 @@ Put the paper's PDF in a folder, start your agent in that folder and tell it: "R
 
 ---
 
-The example slides of the case are not in this repository, because they contain figures from the U-Net paper.
 License: [MIT](LICENSE).
