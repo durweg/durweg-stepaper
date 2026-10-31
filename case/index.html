@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stepaper · A Durweg case</title>
+<style>
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;font:15px/1.5 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f6f8fa}
+nav{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-bottom:1px solid #d0d7de;background:#fff}
+nav button{font:inherit;border:1px solid #d0d7de;background:#f6f8fa;border-radius:999px;padding:.2rem .9rem;cursor:pointer}
+nav button.on{background:#0969da;color:#fff;border-color:#0969da}
+nav a{margin-left:auto;color:#0969da;text-decoration:none}
+iframe{flex:1;border:0;width:100%}
+</style></head><body>
+<nav>
+<button data-l="en">English</button><button data-l="zh">中文</button>
+<a id="mat" href="materials/index.html#en">All materials (中文 · English · Deutsch)</a>
+</nav>
+<iframe id="page" title="Durweg case page"></iframe>
+<script>
+const src={en:"stepaper.en.html",zh:"stepaper.html"};
+const mat={en:"All materials (中文 · English · Deutsch)",zh:"全部材料（中文 · English · Deutsch）"};
+function show(l){
+  document.getElementById("page").src=src[l];
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+  const a=document.getElementById("mat"); a.textContent=mat[l]; a.href="materials/index.html#"+l;
+  document.documentElement.lang=l; history.replaceState(null,"","#"+l);
+}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>show(b.dataset.l));
+show(location.hash==="#zh"?"zh":"en");
+</script></body></html>

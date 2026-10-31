@@ -1,0 +1,188 @@
+{
+  "id": "stepaper",
+  "title": "读论文并做成组会 PPT",
+  "skill": "skills/stepaper",
+  "steps": [
+    {
+      "id": "language",
+      "title": "选择语言",
+      "instructions": "skills/stepaper/SKILL.md#1-language",
+      "artifacts": [
+        "steps/1-language.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/1-language.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "core-claim",
+      "title": "找到核心论点",
+      "instructions": "skills/stepaper/SKILL.md#2-core-claim",
+      "artifacts": [
+        "steps/2-core-claim.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/2-core-claim.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "walkthrough",
+      "title": "一步一步读，每步追问",
+      "instructions": "skills/stepaper/SKILL.md#3-walkthrough",
+      "artifacts": [
+        "steps/3-walkthrough.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/3-walkthrough.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "指标说明",
+      "instructions": "skills/stepaper/SKILL.md#4-metrics",
+      "artifacts": [
+        "steps/4-metrics.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/4-metrics.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "retell-judge",
+      "title": "复述与判断",
+      "instructions": "skills/stepaper/SKILL.md#5-retell-judge",
+      "artifacts": [
+        "steps/5-retell-judge.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/5-retell-judge.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "outline",
+      "title": "列 PPT 大纲",
+      "instructions": "skills/stepaper/SKILL.md#6-outline",
+      "artifacts": [
+        "steps/6-outline.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/6-outline.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "slides",
+      "title": "做页面",
+      "instructions": "skills/stepaper/SKILL.md#7-slides",
+      "artifacts": [
+        "steps/7-slides.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/7-slides.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rehearse",
+      "title": "试讲检查",
+      "instructions": "skills/stepaper/SKILL.md#8-rehearse",
+      "artifacts": [
+        "steps/8-rehearse.md"
+      ],
+      "gates": [
+        {
+          "type": "sections",
+          "file": "steps/8-rehearse.md",
+          "headings": [
+            {
+              "title": "Result",
+              "min_chars": 20
+            }
+          ]
+        },
+        {
+          "type": "user"
+        }
+      ]
+    }
+  ]
+}
