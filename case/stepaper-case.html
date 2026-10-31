@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stepaper · A Durweg case</title>
+<style>
+body{font:16px/1.65 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#1f2328;
+background:#f6f8fa;margin:0}
+main{max-width:860px;margin:2.5rem auto;padding:2rem 2.5rem;background:#fff;border:1px solid #d0d7de;
+border-radius:12px}
+header p{color:#57606a;margin:.2rem 0 0}
+.tag{display:inline-block;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:#0969da;
+background:#ddf4ff;border-radius:999px;padding:.15rem .7rem}
+h1{font-size:1.9rem;margin:.6rem 0 .2rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .8rem;padding-bottom:.3rem;border-bottom:1px solid #d8dee4}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid #d0d7de;padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f6f8fa}
+blockquote{margin:.4rem 0 .9rem;padding:.5rem .9rem;border-left:4px solid #1f883d;background:#f0fff4}
+.who{font-size:.85rem;color:#57606a;margin-top:.8rem}
+.pass{color:#1a7f37;font-weight:600}
+code{background:#eff1f3;border-radius:4px;padding:.1rem .3rem;font-size:.9em}
+footer{margin-top:2.5rem;color:#57606a;font-size:.85rem}
+
+.lang{max-width:860px;margin:1.2rem auto -1.2rem;text-align:right;padding:0 .5rem}
+.lang button{font:inherit;font-size:.9rem;border:1px solid #d0d7de;background:#fff;border-radius:999px;padding:.15rem .8rem;margin-left:.3rem;cursor:pointer}
+.lang button.on{background:#0969da;color:#fff;border-color:#0969da}
+main[hidden]{display:none}
+</style></head>
+<body>
+<div class="lang"><button data-l="en">English</button><button data-l="zh">中文</button></div>
+<main id="en" lang="en">
+<header><span class="tag">A Durweg case</span><h1>Read a paper and turn it into group-meeting slides</h1>
+<p>Made with Durweg on 2026-10-31. Workflow: stepaper.</p></header>
+<p>Install: <code>durweg library add stepaper</code> · Repository: <a href="https://github.com/musetee/durweg-stepaper">musetee/durweg-stepaper</a> · Materials in English, Chinese and German: <a href="https://github.com/musetee/durweg-stepaper/blob/main/case/materials/en/01-method.md">case/materials</a></p>
+<p style="background:#fff8c5;border:1px solid #d4a72c;border-radius:6px;padding:.5rem .8rem">English translation of the Durweg case page. The original, generated from the run record, is in Chinese.</p>
+<h2>The method</h2>
+<h3>My method: read a paper and turn it into group-meeting slides</h3>
+<h3>Task</h3>
+<p>Read a paper, understand its core claim, and summarize it as slides to present at the group meeting.</p>
+<h3>How I do it</h3>
+<p>1. Read the abstract first and find the paper&#x27;s core claim: which concrete problem it solves.</p>
+<p>2. Read on step by step (cause → method → why it works → how it was tested → results), asking questions and trying to refute at every step.</p>
+<p>3. Retell the core claim in my own words, best as a comparison (is A or B better?).</p>
+<p>4. Judge: did the paper solve its problem? How strong is the evidence (my reservations)? Did I reach my own goal (understanding the paper)?</p>
+<p>5. Outline the slides: each slide answers one question, and its title is that slide&#x27;s one-sentence conclusion. Suggested order:</p>
+<ul><li>Slide 1: title + the core claim in one sentence (the concrete problem the paper solves)</li><li>Slide 2: where the problem comes from (cause)</li><li>Slide 3: their method</li><li>Slide 4: why it works</li><li>Slide 5: how it was tested (data, comparison set-up)</li><li>Slide 6: results, one figure or table showing the core comparison (A vs B), with metric and numbers</li><li>Slide 7: my questions and judgement (solved or not, strength of evidence, reservations)</li><li>Slide 8: my retelling (one sentence) + questions for the group</li></ul>
+<p>6. Build the slides from the outline: key figures from the paper, little text per slide, no piles of formulas.</p>
+<p>7. Rehearse once: does every slide answer its question, and do the slides form one line?</p>
+<h3>Where it goes wrong</h3>
+<ul><li>Misreading the paper&#x27;s purpose (for example, taking &quot;accuracy does not drop at another hospital&quot; for &quot;higher accuracy&quot;).</li><li>Only retelling the paper without asking or refuting, so it stays unclear whether the problem was solved.</li><li>Too much text and too many formulas on a slide; one slide covering several things.</li><li>Result numbers without the metric, the comparison and the source.</li></ul>
+<h3>Where I decide</h3>
+<ul><li>Whether my understanding of the core claim is right.</li><li>How strong the evidence is and what my reservations are.</li><li>The slide outline (which slides, in which order).</li></ul>
+<h2>The steps</h2>
+<table><tr><th>#</th><th>Step</th><th>What it does</th><th>What it delivers</th><th>You decide</th></tr>
+<tr><td>1</td><td><b>Choose the language</b></td><td>Ask the user which language this run uses (for example Chinese, English, German). All notes, the metrics guide, the slides and speaker notes are written in it, and the agent talks to the user in it.</td><td>The language of this run.</td><td>yes</td></tr><tr><td>2</td><td><b>Find the core claim</b></td><td>Read the abstract and write in one or two sentences the concrete problem the paper solves and its core claim.</td><td>Core-claim note: which concrete problem, what the paper claims.</td><td>yes</td></tr><tr><td>3</td><td><b>Read step by step, question every step</b></td><td>Go through cause → method → why it works → how it was tested → results together with the user, one step at a time (one part of the method at a time); after each, ask whether the user understood and invite their own view or rebuttal, and answer their questions; if they did not understand, explain more simply, without adding formulas, figures or long explanations. Record per step the key points, the user&#x27;s questions and answers, their retelling and views; views that need the results are marked &quot;to be checked&quot; and checked in the results step. Finally note what the questions changed in the understanding of the core claim.</td><td>Step-by-step discussion notes: key points, the user&#x27;s questions and answers, retellings and views, and what the questions changed.</td><td>yes</td></tr><tr><td>4</td><td><b>Metrics guide</b></td><td>List every evaluation metric in the paper; for each, only two things: what it is for, and how to read it (higher or lower is better, range, how to read the paper&#x27;s numbers). No derivations; short enough for the user to retell.</td><td>Metrics guide (markdown): one short paragraph per metric.</td><td>yes</td></tr><tr><td>5</td><td><b>Retell and judge</b></td><td>First ask the user to retell the core claim in their own words as a comparison (is A or B better?), then to judge: did the paper solve its problem, how strong is the evidence, what are the reservations, did they reach their own goal (understanding the paper). Write it up in the user&#x27;s words; mark Claude&#x27;s additions or rebuttals separately, and the user decides whether to keep them.</td><td>The user&#x27;s one-sentence retelling (A vs B) + judgement and reservations.</td><td>yes</td></tr><tr><td>6</td><td><b>Outline the slides</b></td><td>Each slide answers one question, and its title is that slide&#x27;s one-sentence conclusion; default order: core claim, cause, method, why it works, how it was tested, results (A vs B, with metrics and numbers), questions and judgement, retelling and discussion questions.</td><td>Slide outline: each slide&#x27;s title conclusion and the figure or numbers on it.</td><td>yes</td></tr><tr><td>7</td><td><b>Make the slides</b></td><td>Build the deck from the confirmed outline: key figures from the paper, little text per slide, no piles of formulas; the results slide names the metric, the comparison and the source; speaker notes on every slide.</td><td>The slide deck (PPT file).</td><td></td></tr><tr><td>8</td><td><b>Rehearse and check</b></td><td>Rehearse slide by slide: does each slide answer its question, do the slides form one line, do the numbers match the paper; note what to change and change it; ask the user to open the file in PowerPoint and check how it looks.</td><td>The corrected deck + the list of problems found and fixed.</td><td>yes</td></tr></table>
+<h2>In the user&#x27;s own words</h2>
+<p>Every step that needed the user&#x27;s decision went on only after they confirmed it. What they said:</p>
+<p class='who'>Describe how you do it</p><blockquote>对 (“Right.”)</blockquote><p class='who'>Turn it into steps</p><blockquote>可以 (“OK.”)</blockquote><p class='who'>Build the workflow</p><blockquote>可以 (“OK.”)</blockquote><p class='who'>Run your new workflow once</p><blockquote>确认 (“Confirmed.”)</blockquote>
+<h2>The first run</h2>
+<p>The new workflow was run once right away: run <code>2026-10-31_try-2</code>, check result <span class='pass'>PASS</span>.</p>
+<p>Decisions in that run:</p><p class='who'>Choose the language</p><blockquote>yes</blockquote><p class='who'>Find the core claim</p><blockquote>can we skip this step and just use the content of chinese version?</blockquote><p class='who'>Read step by step, question every step</p><blockquote>confirm</blockquote><p class='who'>Metrics guide</p><blockquote>yes</blockquote><p class='who'>Retell and judge</p><blockquote>yes confirm</blockquote><p class='who'>Outline the slides</p><blockquote>confirm</blockquote><p class='who'>Rehearse and check</p><blockquote>confirm</blockquote>
+<h2>Lessons</h2>
+<p>Reading papers is a headache, and dropping the PDF on an AI does not work well either, because the AI also outputs a mass of information that is hard to understand. I turned the way I understand papers into a durweg workflow: start from the core problem, look step by step at how the researchers did it, and ask back: was this core problem solved? I think it works very well.</p>
+<h2>Use it yourself</h2>
+<p>With Durweg installed, put the workflow folder stepaper into your library (durweg library add &lt;folder&gt; --name stepaper) and tell your agent: &quot;Run stepaper with durweg.&quot;</p>
+<footer>Durweg · <code>stepaper</code></footer>
+</main>
+<main id="zh" lang="zh" hidden>
+<header><span class="tag">Durweg 案例</span><h1>读论文并做成组会 PPT</h1>
+<p>用 Durweg 制作于 2026-10-31。工作流：stepaper。</p></header>
+<p>安装：<code>durweg library add stepaper</code> · 仓库：<a href="https://github.com/musetee/durweg-stepaper">musetee/durweg-stepaper</a> · 中文、英文、德语材料：<a href="https://github.com/musetee/durweg-stepaper/blob/main/case/materials/zh/01-method.md">case/materials</a></p>
+<h2>方法</h2>
+<h3>我的方法：读论文并做成组会 PPT</h3>
+<h3>Task</h3>
+<p>读一篇论文，看懂它的核心论点，并把它总结成 PPT，在组会上报告。</p>
+<h3>How I do it</h3>
+<p>1. 先看摘要，找到论文的核心论点：它要解决什么具体问题。</p>
+<p>2. 一步一步往下读（原因 → 办法 → 为什么有用 → 怎么检验 → 结果），每一步都提问、尝试反驳。</p>
+<p>3. 用自己的话复述核心论点，最好说成一个对比（A 和 B 哪个更好）。</p>
+<p>4. 判断：论文的问题解决了吗？证据有多强（我的保留）？我自己的目的（看懂这篇论文）达到了吗？</p>
+<p>5. 列 PPT 大纲：每页只回答一个问题，标题就是这一页的一句话结论。建议顺序：</p>
+<ul><li>第 1 页：题目 + 一句话核心论点（论文要解决的具体问题）</li><li>第 2 页：问题从哪里来（原因）</li><li>第 3 页：他们的办法</li><li>第 4 页：为什么有用</li><li>第 5 页：怎么检验（数据、对比设置）</li><li>第 6 页：结果，用一张图或表展示核心对比（A 和 B），写清指标和数字</li><li>第 7 页：我的追问和判断（解决了没有、证据强弱、保留）</li><li>第 8 页：我的复述（一句话）+ 想在组会上讨论的问题</li></ul>
+<p>6. 按大纲做页面：从论文里取关键图，每页文字少，不堆公式。</p>
+<p>7. 自己试讲一遍：每一页是否回答了它的问题，前后能否连成一条线。</p>
+<h3>Where it goes wrong</h3>
+<ul><li>误解论文的目的（例如把&quot;换医院后准确率不掉&quot;误当成&quot;提高准确率&quot;）。</li><li>只复述论文，不提问、不反驳，看不出问题到底解决了没有。</li><li>PPT 文字和公式太多，一页讲好几件事。</li><li>结果数字没写清指标、对比对象和出处。</li></ul>
+<h3>Where I decide</h3>
+<ul><li>我对核心论点的理解是否正确。</li><li>证据强不强、我的保留是什么。</li><li>PPT 大纲（讲哪些页、按什么顺序）。</li></ul>
+<h2>步骤</h2>
+<table><tr><th>#</th><th>步骤</th><th>做什么</th><th>交出什么</th><th>由用户决定</th></tr>
+<tr><td>1</td><td><b>选择语言</b></td><td>先问用户这次运行用什么语言（例如中文、英文、德语）。之后所有笔记、指标说明、PPT 和讲稿都用这种语言写，和用户交流也用这种语言。</td><td>这次运行使用的语言。</td><td>是</td></tr><tr><td>2</td><td><b>找到核心论点</b></td><td>读摘要，用一两句话写出论文要解决的具体问题和它的核心论点。</td><td>核心论点笔记：论文要解决什么具体问题，主张什么。</td><td>是</td></tr><tr><td>3</td><td><b>一步一步读，每步追问</b></td><td>按 原因 → 办法 → 为什么有用 → 怎么检验 → 结果 的顺序，和用户一起一步一步读：一次只讲一步（办法有几部分就分几次讲），讲完先问用户看懂了没有，请用户说自己的想法或反驳，回答用户的提问；用户说没看懂时，换一种更简单的讲法，不加公式、图或长解释。每一步记下要点、用户的提问与回答、用户的复述和见解；用户的见解若要靠后面的结果检验，标为待检验，到结果一步核对。最后写明追问改变了对核心论点的哪些理解。</td><td>逐步讨论笔记：每一步的要点、用户的提问与回答、用户的复述和见解，以及追问改变了什么。</td><td>是</td></tr><tr><td>4</td><td><b>指标说明</b></td><td>列出论文里出现的每个评价指标，每个只写两件事：它是用来干什么的；怎么看它的好坏（越大越好还是越小越好、取值范围、论文里的数字怎么读）。不写推导和公式细节，以用户能复述为准。</td><td>指标说明 markdown：每个指标一小段（干什么用、怎么看好坏）。</td><td>是</td></tr><tr><td>5</td><td><b>复述与判断</b></td><td>先请用户用自己的话把核心论点复述成一个对比（A 和 B 哪个更好），再请用户判断：论文的问题是否解决、证据有多强、保留是什么、自己的目的（看懂这篇论文）是否达到。按用户的话整理；Claude 想补充或反驳的地方单独标出，由用户决定是否保留。</td><td>用户的一句话复述（A 对 B）+ 判断与保留（附用户原话）。</td><td>是</td></tr><tr><td>6</td><td><b>列 PPT 大纲</b></td><td>每页只回答一个问题，标题写成这一页的一句话结论；默认顺序：核心论点、原因、办法、为什么有用、怎么检验、结果（A 对 B，写清指标和数字）、追问与判断、复述与讨论问题。</td><td>PPT 大纲：每页的标题结论和要放的图或数字。</td><td>是</td></tr><tr><td>7</td><td><b>做页面</b></td><td>按确认的大纲做 PPT：从论文取关键图，每页文字少，不堆公式，结果页写清指标、对比对象和出处；讲稿写进每页备注。</td><td>PPT 文件。</td><td></td></tr><tr><td>8</td><td><b>试讲检查</b></td><td>按页试讲一遍，检查每页是否回答了它的问题、前后是否连成一条线、数字是否和论文一致，记下要改的地方并改好；请用户在 PowerPoint 里打开文件检查显示效果。</td><td>改好的 PPT + 试讲时发现并修改的问题清单。</td><td>是</td></tr></table>
+<h2>用户的原话</h2>
+<p>每个需要用户拍板的步骤，都是用户确认以后才往下走的。用户当时说：</p>
+<p class='who'>描述你的方法</p><blockquote>对</blockquote><p class='who'>拆成步骤</p><blockquote>可以</blockquote><p class='who'>生成工作流</p><blockquote>可以</blockquote><p class='who'>试跑一次</p><blockquote>确认</blockquote>
+<h2>第一次运行</h2>
+<p>新工作流做好后马上运行了一次：运行 <code>2026-10-31_try-2</code>，检查结果 <span class='pass'>PASS</span>。</p>
+<p>那次运行里用户的决定：</p><p class='who'>选择语言</p><blockquote>yes</blockquote><p class='who'>找到核心论点</p><blockquote>can we skip this step and just use the content of chinese version?</blockquote><p class='who'>一步一步读，每步追问</p><blockquote>confirm</blockquote><p class='who'>指标说明</p><blockquote>yes</blockquote><p class='who'>复述与判断</p><blockquote>yes confirm</blockquote><p class='who'>列 PPT 大纲</p><blockquote>confirm</blockquote><p class='who'>试讲检查</p><blockquote>confirm</blockquote>
+<h2>经验</h2>
+<p>读论文是一件头疼的事情，把PDF丢给AI也效果并不好，因为AI同样会输出大量难以理解的信息。我把我理解论文的方式做成了一个durweg工作流：从核心问题出发，一步一步看研究人员是怎么做的，并且反问，这个核心问题是否得到了解决？我认为效果很好。</p>
+<h2>自己用这个工作流</h2>
+<p>装好 Durweg 以后，把工作流文件夹 stepaper 放进方法库（durweg library add &lt;文件夹&gt; --name stepaper），然后对 agent 说：“用 durweg 运行 stepaper”。</p>
+<footer>Durweg · <code>stepaper</code></footer>
+</main>
+<script>
+function show(l){
+  ["en","zh"].forEach(x=>document.getElementById(x).hidden=(x!==l));
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+  document.documentElement.lang=l;
+  document.title=l==="zh"?"stepaper · Durweg 案例":"stepaper · A Durweg case";
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{show(b.dataset.l);history.replaceState(null,"","#"+b.dataset.l);});
+function fromHash(){show(location.hash==="#zh"?"zh":"en");}
+window.addEventListener("hashchange",fromHash);fromHash();
+</script>
+</body></html>
