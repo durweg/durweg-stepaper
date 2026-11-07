@@ -15,4 +15,4 @@
 | 7 | How was it tested? | Three public challenges, the answers held by the organizers | Table: dataset, image type, training images (30 / 35 / 20), metric |
 | 8 | What are the results (A vs B)? | Without post-processing, U-Net already beats the sliding window | Table 1 excerpt: U-Net vs IDSIA (warping 0.000353 vs 0.000420, Rand 0.0382 vs 0.0504); Table 2: IOU 0.92 vs 0.83, 0.78 vs 0.46 |
 | 9 | How reliable is the conclusion? | The scores are credible, but there is no evidence for why it is better | Four reservations: sliding window with post-processing has better Rand error (0.0189, 0.0305); no ablation; "faster" not measured under equal conditions; microscopy only |
-| 10 | What do we take away? | The architecture can be used directly; a new task needs its own experiments | A-vs-B retelling in one sentence; discussion: ① which ablations first on our data? ② padding or no padding? |
+| 10 | What do we take away? | The architecture can be used directly; a new task needs its own experiments | A-vs-B retelling in one sentence; open questions: ① which ablations first on a new dataset? ② padding or no padding? |

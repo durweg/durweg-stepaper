@@ -1,9 +1,9 @@
 ---
 name: stepaper
-description: 读论文并做成组会 PPT - the user's own method, run step by step with Durweg.
+description: 读懂论文，再用 PPT 检验自己懂了 - the user's own method, run step by step with Durweg.
 ---
 
-# 读论文并做成组会 PPT
+# 读懂论文，再用 PPT 检验自己懂了
 
 Run it with durweg (skill run-workflow): `durweg start stepaper <name-of-this-run>`, then for each step `durweg begin`, do the step, write its file, and `durweg done`. Talk to the user in the language set in ~/Durweg/config.json.
 
@@ -71,7 +71,7 @@ The user decides here: write the result, `durweg propose`, show it to the user, 
 
 **列 PPT 大纲**
 
-Do: 每页只回答一个问题，标题写成这一页的一句话结论；默认顺序：核心论点、原因、办法、为什么有用、怎么检验、结果（A 对 B，写清指标和数字）、追问与判断、复述与讨论问题。
+Do: 每页只回答一个问题，标题写成这一页的一句话结论；默认顺序：核心论点、原因、办法、为什么有用、怎么检验、结果（A 对 B，写清指标和数字）、追问与判断、复述与还想弄清的问题。
 
 Deliver: PPT 大纲：每页的标题结论和要放的图或数字。
 

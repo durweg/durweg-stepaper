@@ -5,7 +5,7 @@
 fig1-unet.png      U-Net schematic, redrawn from the layer sizes the paper gives (Fig. 1)
 fig3-weights.png   synthetic touching cells: (a) image, (b) instances, (c) labels with gaps, (d) weight map by Eq. 2
 cells-*.png        the synthetic image of (a) and three elastic deformations as Section 3.1 describes
-Same aspect ratios as the crops used in the internal decks, so the slide scripts place them unchanged.
+Same aspect ratios as the crops used in earlier versions, so the slide scripts place them unchanged.
 """
 import sys
 from pathlib import Path

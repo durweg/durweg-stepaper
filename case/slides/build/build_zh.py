@@ -1,4 +1,4 @@
-"""Public version of the U-Net group-meeting deck: all figures self-made (see make_figures.py).
+"""Public version of the U-Net slides: all figures self-made (see make_figures.py).
 
 Run: uv run --no-project --with python-pptx python -I build_zh.py <out-dir> <figures-dir>
 """
@@ -137,7 +137,7 @@ def picture(slide, path, x, y, w=None, h=None, name=None):
 
 # ---------- 1 title ----------
 s = slide_base(None, dark=True)
-text(s, 0.8, 0.9, 7.0, 0.4, ["组会论文报告 · 2026-10-31"], size=14, color=TEAL_LIGHT)
+text(s, 0.8, 0.9, 7.0, 0.4, ["论文笔记 · 2026-10-31"], size=14, color=TEAL_LIGHT)
 text(s, 0.8, 1.5, 6.6, 2.4, ["只有几十张标注图，也能训练出精细的分割网络"], size=40, bold=True,
      head=True, color=WHITE, name="Title")
 text(s, 0.8, 4.15, 6.4, 1.2, [
@@ -387,8 +387,8 @@ text(s, 1.1, 2.55, 5.1, 3.7, [
     [("B ", {"bold": True, "color": GRID}), ("滑动窗口网络（Ciresan 等）", {"color": WHITE})],
     [("在 20–35 张训练图的显微镜分割上，不加后处理时 A 更好", {"color": WHITE, "bold": True})],
 ], size=16, space=12)
-text(s, 7.0, 2.3, 5.5, 0.5, ["想讨论的问题"], size=18, bold=True, color=TEAL_LIGHT)
-qs = ["迁移到我们的数据，先做哪些消融实验？", "补边还是不补边？"]
+text(s, 7.0, 2.3, 5.5, 0.5, ["我还想弄清的问题"], size=18, bold=True, color=TEAL_LIGHT)
+qs = ["迁移到新数据，先做哪些消融实验？", "补边还是不补边？"]
 for k, q in enumerate(qs):
     y = 3.0 + k * 1.6
     badge(s, 7.0, y + 0.2, str(k + 1), fill=CORAL, d=0.6, size=18)
@@ -397,6 +397,6 @@ source(s, SRC, dark=True)
 notes(s, "我的判断：在小数据集的分割任务上问题解决了；分数由比赛方给出，可信；但没有消融实验，"
          "要在其他数据集上复用，网络结构和后处理方案都需要额外实验来专门适配。")
 
-out = OUT / "unet-group-meeting-zh.pptx"
+out = OUT / "unet-slides-zh.pptx"
 prs.save(out)
 print(out)

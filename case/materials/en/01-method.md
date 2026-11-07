@@ -1,11 +1,11 @@
 [中文](../zh/01-method.md) · [English](../en/01-method.md) · [Deutsch](../de/01-method.md)
 
-# My method: read a paper and turn it into group-meeting slides
+# My method: read a paper and check my understanding with slides
 
 The method as the user first described it (write-your-method step 1, confirmed). After the trial run, two steps were added to the workflow, "choose the language" and "metrics guide"; see *Workflow steps*.
 
 ## Task
-Read a paper, understand its core claim, and summarize it as slides to present at the group meeting.
+Read a paper, understand its core claim, and summarize it as slides, to check that I understood it myself.
 
 ## How I do it
 1. Read the abstract first and find the paper's core claim: which concrete problem it solves.
@@ -20,7 +20,7 @@ Read a paper, understand its core claim, and summarize it as slides to present a
    - Slide 5: how it was tested (data, comparison set-up)
    - Slide 6: results, one figure or table showing the core comparison (A vs B), with metric and numbers
    - Slide 7: my questions and judgement (solved or not, strength of evidence, reservations)
-   - Slide 8: my retelling (one sentence) + questions for the group
+   - Slide 8: my retelling (one sentence) + questions I still have
 6. Build the slides from the outline: key figures from the paper, little text per slide, no piles of formulas.
 7. Rehearse once: does every slide answer its question, and do the slides form one line?
 

@@ -1,4 +1,4 @@
-"""Public version of the U-Net group-meeting deck: all figures self-made (see make_figures.py).
+"""Public version of the U-Net slides: all figures self-made (see make_figures.py).
 
 Run: uv run --no-project --with python-pptx python -I build_en.py <out-dir> <figures-dir>
 """
@@ -137,7 +137,7 @@ def picture(slide, path, x, y, w=None, h=None, name=None):
 
 # ---------- 1 title ----------
 s = slide_base(None, dark=True)
-text(s, 0.8, 0.9, 7.0, 0.4, ["Group meeting · paper report · 2026-10-31"], size=14, color=TEAL_LIGHT)
+text(s, 0.8, 0.9, 7.0, 0.4, ["Paper notes · 2026-10-31"], size=14, color=TEAL_LIGHT)
 text(s, 0.8, 1.45, 6.6, 2.6, ["A few dozen annotated images are enough to train a precise segmentation network"],
      size=34, bold=True, head=True, color=WHITE, name="Title")
 text(s, 0.8, 4.15, 6.4, 1.2, [
@@ -394,8 +394,8 @@ text(s, 1.1, 2.55, 5.1, 3.7, [
     [("B ", {"bold": True, "color": GRID}), ("the sliding-window network (Ciresan et al.)", {"color": WHITE})],
     [("On microscopy segmentation with 20–35 training images, A is better without post-processing", {"color": WHITE, "bold": True})],
 ], size=16, space=12)
-text(s, 7.0, 2.3, 5.5, 0.5, ["Questions for discussion"], size=18, bold=True, color=TEAL_LIGHT)
-qs = ["Which ablations should we run first on our data?", "Padding or no padding?"]
+text(s, 7.0, 2.3, 5.5, 0.5, ["Questions I still have"], size=18, bold=True, color=TEAL_LIGHT)
+qs = ["Which ablations should run first on a new dataset?", "Padding or no padding?"]
 for k, q in enumerate(qs):
     y = 3.0 + k * 1.6
     badge(s, 7.0, y + 0.2, str(k + 1), fill=CORAL, d=0.6, size=18)
@@ -404,6 +404,6 @@ source(s, SRC, dark=True)
 notes(s, "My judgement: for segmentation with small datasets the problem is solved; the scores come from the organizers and are credible; "
          "but without ablations, reusing the method on other datasets needs extra experiments to adapt the architecture and post-processing.")
 
-out = OUT / "unet-group-meeting-en.pptx"
+out = OUT / "unet-slides-en.pptx"
 prs.save(out)
 print(out)

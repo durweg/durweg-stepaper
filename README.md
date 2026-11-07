@@ -2,15 +2,15 @@
 
 # stepaper
 
-**A [Durweg](https://github.com/durweg/durweg) workflow for anyone who has to understand a research paper and present it at a group meeting: instead of handing you a pile of summary, the AI agent goes through the paper with you one step at a time, asks whether you understood, lets you question every step, and only then builds the slides.**
+**A [Durweg](https://github.com/durweg/durweg) workflow for anyone who wants to really understand a research paper: instead of handing you a pile of summary, the AI agent goes through the paper with you one step at a time, asks whether you understood, lets you question every step, and only then builds slides, which check that you understood it.**
 
-It starts from the paper's core problem, follows step by step how the researchers solved it, and keeps asking back: was this core problem really solved? It was made with Durweg's own guide write-your-method and tried on the U-Net paper (Ronneberger et al., MICCAI 2015). The whole story is on the **[case page](https://claude.ai/artifact/8k8yQWw4c8UEvyqktYbAQk)** (English, with a switch to Chinese; a copy is in this repository: [case/stepaper-case.html](case/stepaper-case.html)). The workflow's step texts are in Chinese; the agent asks at the start which language the run uses.
+It starts from the paper's core problem, follows step by step how the researchers solved it, and keeps asking back: was this core problem really solved? It was made with Durweg's own guide write-your-method and tried on the U-Net paper (Ronneberger et al., MICCAI 2015). The whole story is on the **[case page](case/stepaper-case.html)** (English, with a switch to Chinese; download it to view it). The workflow's step texts are in Chinese; the agent asks at the start which language the run uses.
 
 ## 📥 The finished slides
 
-What one run produces: the 10-slide group-meeting deck for the U-Net paper, with speaker notes on every slide.
+What one run produces: a 10-slide deck for the U-Net paper, with speaker notes on every slide.
 
-**Download:** [⬇ English (.pptx)](https://github.com/durweg/durweg-stepaper/raw/main/case/slides/unet-group-meeting-en.pptx) · [⬇ 中文 (.pptx)](https://github.com/durweg/durweg-stepaper/raw/main/case/slides/unet-group-meeting-zh.pptx) · [⬇ Deutsch (.pptx)](https://github.com/durweg/durweg-stepaper/raw/main/case/slides/unet-group-meeting-de.pptx)
+**Download:** [⬇ English (.pptx)](https://github.com/durweg/durweg-stepaper/raw/main/case/slides/unet-slides-en.pptx) · [⬇ 中文 (.pptx)](https://github.com/durweg/durweg-stepaper/raw/main/case/slides/unet-slides-zh.pptx) · [⬇ Deutsch (.pptx)](https://github.com/durweg/durweg-stepaper/raw/main/case/slides/unet-slides-de.pptx)
 
 [![The 10 slides of the English deck](case/slides/preview-en.png)](case/slides/preview-en.png)
 
@@ -49,7 +49,7 @@ Put the paper's PDF in a folder, start your agent in that folder and tell it: "R
 
 | I want to | How |
 | :--- | :--- |
-| See how this workflow was made | [case page](https://claude.ai/artifact/8k8yQWw4c8UEvyqktYbAQk) |
+| See how this workflow was made | [case page](case/stepaper-case.html) |
 | Read the full U-Net example | [method](case/materials/en/01-method.md), [discussion notes](case/materials/en/04-walkthrough.md), [metrics guide](case/materials/en/05-metrics.md), [retell and judge](case/materials/en/06-retell-judge.md); all materials: [case/materials/index.html](case/materials/index.html) |
 | Make it my own | Make your own version with Durweg's write-your-method, or edit `workflow.json` and `skills/stepaper/SKILL.md` following the [workflow format](https://github.com/durweg/durweg/blob/main/docs/workflow-format.md) |
 | Stop using it | `durweg library remove stepaper`, then delete `~/Durweg/workflows/stepaper/` |

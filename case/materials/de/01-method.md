@@ -1,11 +1,11 @@
 [中文](../zh/01-method.md) · [English](../en/01-method.md) · [Deutsch](../de/01-method.md)
 
-# Meine Methode: ein Paper lesen und daraus Folien für das Gruppenmeeting machen
+# Meine Methode: ein Paper lesen und mit Folien prüfen, ob ich es verstanden habe
 
 Die Methode, wie der Nutzer sie zuerst beschrieben hat (write-your-method Schritt 1, bestätigt). Nach dem Probelauf kamen zwei Schritte hinzu, „Sprache wählen“ und „Erklärung der Metriken“; siehe *Schritte des Workflows*.
 
 ## Aufgabe
-Ein Paper lesen, seine Kernaussage verstehen und sie als Folien zusammenfassen, um sie im Gruppenmeeting vorzustellen.
+Ein Paper lesen, seine Kernaussage verstehen und sie als Folien zusammenfassen, um zu prüfen, ob ich es selbst verstanden habe.
 
 ## So gehe ich vor
 1. Zuerst den Abstract lesen und die Kernaussage finden: welches konkrete Problem das Paper löst.
@@ -20,7 +20,7 @@ Ein Paper lesen, seine Kernaussage verstehen und sie als Folien zusammenfassen, 
    - Folie 5: Wie getestet wurde (Daten, Vergleichsaufbau)
    - Folie 6: Ergebnisse, eine Abbildung oder Tabelle mit dem Kernvergleich (A gegen B), mit Metrik und Zahlen
    - Folie 7: Meine Fragen und mein Urteil (gelöst oder nicht, Stärke der Evidenz, Vorbehalte)
-   - Folie 8: Meine Wiedergabe (ein Satz) + Fragen für die Gruppe
+   - Folie 8: Meine Wiedergabe (ein Satz) + Fragen, die für mich offen sind
 6. Die Folien nach der Gliederung bauen: wichtige Abbildungen aus dem Paper, wenig Text pro Folie, keine Formelberge.
 7. Einmal Probe halten: Beantwortet jede Folie ihre Frage, und ergeben die Folien einen roten Faden?
 

@@ -1,4 +1,4 @@
-"""Public version of the U-Net group-meeting deck: all figures self-made (see make_figures.py).
+"""Public version of the U-Net slides: all figures self-made (see make_figures.py).
 
 Run: uv run --no-project --with python-pptx python -I build_de.py <out-dir> <figures-dir>
 """
@@ -137,7 +137,7 @@ def picture(slide, path, x, y, w=None, h=None, name=None):
 
 # ---------- 1 title ----------
 s = slide_base(None, dark=True)
-text(s, 0.8, 0.9, 7.0, 0.4, ["Gruppenmeeting · Paper-Vorstellung · 2026-10-31"], size=14, color=TEAL_LIGHT)
+text(s, 0.8, 0.9, 7.0, 0.4, ["Paper-Notizen · 2026-10-31"], size=14, color=TEAL_LIGHT)
 text(s, 0.8, 1.45, 6.6, 2.6, ["Ein paar Dutzend annotierte Bilder reichen für ein präzises Segmentierungsnetz"],
      size=34, bold=True, head=True, color=WHITE, name="Title")
 text(s, 0.8, 4.15, 6.4, 1.2, [
@@ -394,8 +394,8 @@ text(s, 1.1, 2.55, 5.1, 3.7, [
     [("B ", {"bold": True, "color": GRID}), ("das Sliding-Window-Netz (Ciresan et al.)", {"color": WHITE})],
     [("Bei Mikroskopie-Segmentierung mit 20–35 Trainingsbildern ist A ohne Nachbearbeitung besser", {"color": WHITE, "bold": True})],
 ], size=16, space=12)
-text(s, 7.0, 2.3, 5.5, 0.5, ["Fragen zur Diskussion"], size=18, bold=True, color=TEAL_LIGHT)
-qs = ["Welche Ablationen zuerst auf unseren Daten?", "Padding oder kein Padding?"]
+text(s, 7.0, 2.3, 5.5, 0.5, ["Fragen, die für mich offen sind"], size=18, bold=True, color=TEAL_LIGHT)
+qs = ["Welche Ablationen zuerst auf neuen Daten?", "Padding oder kein Padding?"]
 for k, q in enumerate(qs):
     y = 3.0 + k * 1.6
     badge(s, 7.0, y + 0.2, str(k + 1), fill=CORAL, d=0.6, size=18)
@@ -404,6 +404,6 @@ source(s, SRC, dark=True)
 notes(s, "Mein Urteil: Für Segmentierung mit kleinen Datensätzen ist das Problem gelöst; die Punktzahlen stammen von den Veranstaltern und sind glaubwürdig; "
          "aber ohne Ablationen braucht die Übertragung auf andere Datensätze zusätzliche Experimente zur Anpassung von Architektur und Nachbearbeitung.")
 
-out = OUT / "unet-group-meeting-de.pptx"
+out = OUT / "unet-slides-de.pptx"
 prs.save(out)
 print(out)
